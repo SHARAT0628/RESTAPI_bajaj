@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="container">
       <header>
-        <h1>{response ? 'Processing Results' : 'Data Input'}</h1>
+        <h1>{response ? 'Processing Results' : 'StructureFlow'}</h1>
       </header>
 
       <div className="glass-card">
