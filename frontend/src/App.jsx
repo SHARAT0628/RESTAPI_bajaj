@@ -19,7 +19,8 @@ function App() {
         throw new Error("Invalid JSON format. Please provide an array of strings.")
       }
 
-      const res = await axios.post('http://localhost:5000/bfhl', { data })
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+      const res = await axios.post(`${apiUrl}/bfhl`, { data })
       setResponse(res.data)
     } catch (err) {
       setError(err.response?.data?.error || err.message)
@@ -31,20 +32,19 @@ function App() {
   return (
     <div className="container">
       <header>
-        <h1>SRM Challenge</h1>
-        <p className="subtitle">Full Stack Engineering - Hierarchical Insights API</p>
+        <h1>{response ? 'Processing Results' : 'Data Input'}</h1>
       </header>
 
       <div className="glass-card">
         <div className="input-group">
-          <label style={{ textAlign: 'left', fontWeight: '500' }}>Enter node strings (JSON Array):</label>
+          <label style={{ textAlign: 'left', fontWeight: '500' }}>Enter node list:</label>
           <textarea 
             value={input} 
             onChange={(e) => setInput(e.target.value)}
             placeholder='["A->B", "C->D"]'
           />
-          <button onClick={handleSubmit} disabled={loading}>
-            {loading ? 'Processing...' : 'Generate Insights'}
+          <button onClick={handleSubmit} disabled={loading} style={{ fontSize: '1.1rem', padding: '1.2rem' }}>
+            {loading ? 'Processing...' : 'Submit'}
           </button>
         </div>
         {error && <div className="error-message">{error}</div>}
