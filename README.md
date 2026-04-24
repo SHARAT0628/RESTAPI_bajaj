@@ -1,38 +1,33 @@
-# SRM Full Stack Engineering Challenge
+# SRM Full Stack Challenge - StructureFlow
 
-This repository contains the solution for the SRM Full Stack Engineering Challenge.
+This is my project for the SRM Full Stack Engineering Challenge. I built a full-stack application called **StructureFlow** that processes node strings (like `A->B`) and generates a hierarchical tree structure, detects cycles, and calculates the depth of the trees.
 
-## Project Structure
-- `/backend`: Node.js/Express API that processes hierarchical node strings.
-- `/frontend`: React/Vite application with a premium glassmorphism UI.
-
-## Features
-- **POST /bfhl**: Processes hierarchy strings, detects cycles, calculates tree depth, and identifies multi-parent cases.
-- **Visual Tree View**: Interactive tree representation in the frontend.
-- **Summary Insights**: Automatically calculates total trees, cycles, and the largest tree root.
-- **Error Handling**: Robust validation for invalid node formats and self-loops.
-
-## Tech Stack
-- **Backend**: Node.js, Express, CORS.
-- **Frontend**: React, Vite, Axios, Vanilla CSS (Premium design).
-
-## Identity Fields
-- **User ID**: sharathchandra_28062005
+## My Information
+- **Name/User ID**: sharathchandra_28062005
 - **Email**: sg9686@srmist.edu.in
 - **Roll Number**: RA2311030010007
 
-## Local Setup
+## How it works
+The app has two parts:
+1. **Backend**: A Node.js API that does all the logic for building trees and finding cycles.
+2. **Frontend**: A React website where you can type in your nodes and see the results instantly in a nice-looking UI.
 
-### Backend
-1. `cd backend`
-2. `npm install`
-3. `npm start` (Runs on http://localhost:5000)
+## Built With
+- **Frontend**: React (Vite), Axios, CSS
+- **Backend**: Node.js, Express, CORS
 
-### Frontend
-1. `cd frontend`
-2. `npm install`
-3. `npm run dev` (Runs on http://localhost:5173)
+## Links
+- **Frontend**: [https://restapi-bajaj-tkps.vercel.app/](https://restapi-bajaj-tkps.vercel.app/)
+- **Backend API**: `https://srm-backend.onrender.com`
 
-## Hosting
-- **API**: Hosted on Render/Railway.
-- **Frontend**: Hosted on Vercel/Netlify.
+## Running it on your computer
+
+### 1. Backend
+- Go to the `backend` folder.
+- Run `npm install`.
+- Run `node server.js`. It will start on port 5000.
+
+### 2. Frontend
+- Go to the `frontend` folder.
+- Run `npm install`.
+- Run `npm run dev`. It will start on port 5173.
